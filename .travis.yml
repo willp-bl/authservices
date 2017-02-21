@@ -2,6 +2,10 @@ language: csharp
 solution: Kentor.AuthServices.sln
 dist: trusty # see: https://github.com/travis-ci/travis-ci/issues/6805
 #sudo: required
+install:
+    - nuget restore $TRAVIS_SOLUTION
+script:
+    - xbuild /p:Configuration=Release $TRAVIS_SOLUTION
 matrix:
   include:
     - dotnet: 1.0.0-preview2-003121
