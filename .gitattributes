@@ -1,0 +1,3 @@
+* text=crlf
+*.csproj text=crlf
+*.sln text=crlf
